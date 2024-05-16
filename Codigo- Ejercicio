@@ -20,7 +20,8 @@ listabloqueado ()
 				
 			}
 		
-`bloquearusuario () 
+`
+bloquearusuario () 
 			{
 				read -p "Ingrese el nombre del usuario para bloquear: " usuario
 				if grep -q  "^$usuario: " /etc/shadow; then
