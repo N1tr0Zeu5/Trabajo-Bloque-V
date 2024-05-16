@@ -1,39 +1,76 @@
-# **Trabajo del bloque V**
+#!/bin/bash
+# Author: Juan José
+# Versión: 1.0
+# Descripción: Programa bienvenida
+# Parámetros/Variables
+# Funciones
+# Función para mostrar el menú
+menu ()
+{
+   while true;
+   do
+   	echo "************************************"
+	echo "Menú: "
+	echo "************************************"
+	echo "1.- Crear Usuarios"
+	echo "2.- Borrar Usuarios"
+	echo "3.- Salir"
+	read -p "Pulse un número: " numero
+	
+	case $numero in
+		1)
+			crearUsuarios ;;
+		2)
+			borrarUsuarios ;;
+		3)
+			clear
+			exit ;;
+		*)
+			echo "Error. Por favor, seleccione una opción válida"
+			;;
+	esac
+   done
+}
 
-![Administracion Linux](https://repararelpc.es/wp-content/uploads/2020/12/linux.png)
+crearUsuarios() 
+{
+    while read linea
+    do
+    	usuario=$(echo $linea | cut -d: -f1)
+    	contrasena=$(echo $linea | cut -d: -f2)
+    	nombre=$(echo $linea | cut -d: -f3)
+    	apellido=$(echo $linea | cut -d: -f4)
+    	correo=$(echo $linea | cut -d: -f5)
 
-## BLOQUE V: CREACIÓN DE SCRIPTS INTERMEDIOS EN DEBIAN/UBUNTU.
+    	sudo useradd -m -s /bin/bash -p $contrasena -c "$nombre $apellido" -e "2024-06-30" $usuario > /dev/null 2>&1
+    	    		if [ $? -eq 0  ];
+    				then 
+    					echo "El usuario: $usuario ha sido creado."
+    				else
+    					echo "El usuario: $usuario ya esta creado. "
+    				fi
+    	echo "$correo" > /home/$usuario/correo.txt
 
-## Indice: 
-### 1. Descripción del Script
-### 2. Codigo del Script
-### 3. Observaciones
+    	
+    done </root/usuarios.csv
+}
 
+borrarUsuarios() 
+{
+  	while read linea
+   	do
+   		usuario=$(echo $linea | cut -d: -f1)
+   	 	sudo userdel -r $usuario > /dev/null 2>&1
+   	 	if [ $? -eq 0  ];
+    			then 
+    			echo "El usuario: $usuario ha sido eliminado "
+    			else
+    			echo "El usuario: $usuario no se ha podido eliminar"
+   		fi
+   		
+	done</root/usuarios.csv
+}
 
-## Contenido 
-
-- [Ejercicio 1](https://github.com/N1tr0Zeu5/Trabajo-Bloque-V/tree/Ejercicio_1)
-- [Ejercicio 2](#usage)
-- [Ejercicio 3](#contributing)
-- [Ejercicio 4](#license)
-
-
-## Bibliografia 
-
-## Conclusion
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Realizado por Juan Jose Campos Gomez, Jose Manuel Lamprea Demski y Ruben Ramirez Garcia
+# Bloque principal
+clear
+menu
