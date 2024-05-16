@@ -1,7 +1,7 @@
 #!/bin/bash
-#Author: Jose Manuel Lamprea
+#Author:  Juan Jose Campos Gomez, Jose Manuel Lamprea, Ruben Ramirez Garcia
 #Version: 1.0 
-#Descripcion: usuariosBloqueados
+#Descripcion: 
 #Parámetros/Variables:
 		tiempo=$(date -d "$(who | grep $usuario | awk '{print $4}')" +%s)
 		tiempo_activo=$(date +%s)
@@ -20,7 +20,7 @@ listabloqueado ()
 				
 			}
 		
-bloquearusuario () 
+`bloquearusuario () 
 			{
 				read -p "Ingrese el nombre del usuario para bloquear: " usuario
 				if grep -q  "^$usuario: " /etc/shadow; then
@@ -28,6 +28,7 @@ bloquearusuario ()
 					echo "Usuario $usuario bloqueado"
 				fi
 			}
+`
 			
 desbloquearusuario () {
 				read -p "Ingrese un usuario bloqueado: " $usuario
