@@ -1,3 +1,5 @@
+
+`` 
 #!/bin/bash
 #Author:  Juan Jose Campos Gomez, Jose Manuel Lamprea, Ruben Ramirez Garcia
 #Version: 1.0 
@@ -19,8 +21,7 @@ listabloqueado ()
 				
 				
 			}
-		
-`
+	
 bloquearusuario () 
 			{
 				read -p "Ingrese el nombre del usuario para bloquear: " usuario
@@ -29,7 +30,7 @@ bloquearusuario ()
 					echo "Usuario $usuario bloqueado"
 				fi
 			}
-`
+
 			
 desbloquearusuario () {
 				read -p "Ingrese un usuario bloqueado: " $usuario
@@ -87,3 +88,4 @@ menu () {
 #BloquePrincipal
 clear
 menu
+``
