@@ -5,7 +5,7 @@
 ## BLOQUE V: CREACIÓN DE SCRIPTS INTERMEDIOS EN DEBIAN/UBUNTU.
 
 ## Indice: 
-### 1. Descripcion del script
+### 1. Descripción del Script
 ### 2. Codigo del Script
 ### 3. Observaciones
 
