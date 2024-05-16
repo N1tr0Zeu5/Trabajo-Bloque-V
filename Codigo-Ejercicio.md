@@ -1,7 +1,7 @@
 ## Cabecera:
 ````
 #!/bin/bash
-# Author: Juan Jose Campos Gomez, Jose Manuel Lamprea Demski
+# Author: Juan Jose Campos Gomez, Jose Manuel Lamprea Demski, Ruben Ramirez Garcia
 # Versión: 1.0
 # Descripción: Programa bienvenida
 # Parámetros/Variables:
