@@ -4,8 +4,6 @@
 
 ## BLOQUE V: CREACIÓN DE SCRIPTS INTERMEDIOS EN DEBIAN/UBUNTU.
 
-Realizado por Juan Jose Campos Gomez, Jose Manuel Lamprea Demski y Ruben Ramirez Garcia
-
 ## Indice: 
 ### 1. Descripcion del script
 ### 2. Codigo del Script
@@ -23,3 +21,19 @@ Realizado por Juan Jose Campos Gomez, Jose Manuel Lamprea Demski y Ruben Ramirez
 ## Bibliografia 
 
 ## Conclusion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Realizado por Juan Jose Campos Gomez, Jose Manuel Lamprea Demski y Ruben Ramirez Garcia
