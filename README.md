@@ -6,8 +6,8 @@
 
 ## Ejercicios
 
-- [Installation](https://github.com/N1tr0Zeu5/Trabajo-Bloque-V/tree/Ejercicio_1)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Ejercicio 1](https://github.com/N1tr0Zeu5/Trabajo-Bloque-V/tree/Ejercicio_1)
+- [Ejercicio 2](#usage)
+- [Ejercicio 3](#contributing)
+- [Ejercicio 4](#license)
 
