@@ -1,4 +1,4 @@
-
+```
 #!/bin/bash
 #Author:  Juan Jose Campos Gomez, Jose Manuel Lamprea, Ruben Ramirez Garcia
 #Version: 1.0 
@@ -87,3 +87,4 @@ menu () {
 #BloquePrincipal
 clear
 menu
+```
