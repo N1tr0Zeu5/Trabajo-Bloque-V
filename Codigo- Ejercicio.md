@@ -95,7 +95,7 @@ menu () {
 clear
 menu
 ````
-### Scrip completo
+### Script completo
 ````
 #!/bin/bash
 #Author:  Juan Jose Campos Gomez, Jose Manuel Lamprea, Ruben Ramirez Garcia
