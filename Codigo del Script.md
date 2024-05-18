@@ -41,7 +41,7 @@ cat $informe | grep -w "running"
 #!/bin/bash
 #Author:  Juan Jose Campos Gomez, Jose Manuel Lamprea, Ruben Ramirez Garcia
 #Version: 1.0 
-#Descripcion:
+#Descripcion: Script que comprueba el estado del servicio apache. En caso de que este inactivo, lo reinicia y envia a un informe la informacion de cuando estaba inactivo
 #Parámetros/Variables:
 fecha=`date +%d-%m-%Y-%H:%M`
 informe=`EstadoApache2.txt`
