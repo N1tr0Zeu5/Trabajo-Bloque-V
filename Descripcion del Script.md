@@ -106,4 +106,5 @@ cerrarSesion () {
 	}
 
  En esta funcion mediante un while true y un case hemos creado un bucle de un menu con las diferentes opciones donde cada opcion llama a una diferente funcion.
-   
+> [!CAUTION]
+>Modifica esto.
