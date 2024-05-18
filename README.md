@@ -108,5 +108,5 @@ cerrarSesion () {
  En esta funcion mediante un while true y un case hemos creado un bucle de un menu con las diferentes opciones donde cada opcion llama a una diferente funcion.
 ````
 > [!CAUTION]
->En este script hemos tenido varios problemas, el mas importante conseguir hacer una lista de usuarios bloqueados y entre busquedas de foros y en el propio temario ruben consiguió tras varias horas dar con una posible solución y asi se quedó
+>En este script hemos tenido varios problemas, el mas importante conseguir hacer una lista de usuarios bloqueados y entre busquedas de foros y en el propio temario Ruben consiguió tras varias horas dar con una posible solución y asi se quedó
 > pero lo que mas nos "destruyó" fue que ya hicimos el ejercicio  pero al dia siguiente dejó de funcionar y tuvimos que rehacer el codigo entero.
