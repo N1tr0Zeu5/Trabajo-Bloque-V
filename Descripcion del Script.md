@@ -6,7 +6,7 @@
 
 > [!TIP]
 > #### Formato de fecha:
-> dd-mm-YYYY-Hora:minutos
+>> dd-mm-YYYY-Hora:minutos
  <br>
 
 > [!NOTE]
