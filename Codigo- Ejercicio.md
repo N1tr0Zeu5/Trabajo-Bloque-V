@@ -137,7 +137,7 @@ cerrarSesion () {
 				$tiempo_inactivo
 				if [ $tiempo_inactivo -gt 1800 ]; then 
 					sudo pkill -KILL -u $usuario
-					echo "Sesion de %usuario cerrada por inactividad."
+					echo "Sesion de $usuario cerrada por inactividad."
 				else 
 					echo "El usuario $usuario ha estado conectado recientemente."
 				fi 
