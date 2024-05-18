@@ -1,6 +1,6 @@
 # **Trabajo del bloque V**
 
-![Administracion Linux](https://repararelpc.es/wp-content/uploads/2020/12/linux.png)
+![masterhead](https://user-images.githubusercontent.com/74038190/241765440-80728820-e06b-4f96-9c9e-9df46f0cc0a5.gif)
 
 ## BLOQUE V: CREACIÓN DE SCRIPTS INTERMEDIOS EN DEBIAN/UBUNTU.
 
