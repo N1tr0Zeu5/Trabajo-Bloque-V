@@ -5,7 +5,10 @@
 </p>
 
 > [!TIP]
-> 
 > #### Formato de fecha:
 > dd-mm-YYYY-Hora:minutos
+ <br>
 
+> [!NOTE]
+> Para que el script se ejecute todos los dias a las 6 debemos introducir en el crontab -e:
+> > */ 6 * * * /rutadelscript
