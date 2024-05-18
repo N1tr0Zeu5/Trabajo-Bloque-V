@@ -7,7 +7,7 @@
 ##  ℹ️Indice: 
 ### 1. Descripción del Script
 ### 2. Codigo del Script
-### 3. Ejecucion del Script
+### 3. Ejecución del Script
 
 ## Contenido 
 
