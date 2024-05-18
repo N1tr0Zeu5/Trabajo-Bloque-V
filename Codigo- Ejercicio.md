@@ -118,19 +118,15 @@ listabloqueado ()
 bloquearusuario () 
 			{
 				read -p "Ingrese el nombre del usuario para bloquear: " usuario
-				if grep -q  "^$usuario: " /etc/shadow; then
 					sudo usermod -L "$usuario"
 					echo "Usuario $usuario bloqueado"
-				fi
 			}
 
 			
 desbloquearusuario () {
 				read -p "Ingrese un usuario bloqueado: " $usuario
-				if grep -q "^$usuario: " /etc/shadow; then
 					sudo usermod -U "$usuario"
 					echo "Usuario $usuario desbloqueado"
-				fi
 			}
 
 cerrarSesion () {
