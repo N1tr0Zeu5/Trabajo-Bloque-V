@@ -28,14 +28,14 @@ listabloqueado ()
 bloquearusuario () 
 			{
 				read -p "Ingrese el nombre del usuario para bloquear: " usuario
-					sudo usermod -L "$usuario"
+					`sudo usermod -L $usuario`
 					echo "Usuario $usuario bloqueado"
 			}
 
 			
 desbloquearusuario () {
 				read -p "Ingrese un usuario bloqueado: " $usuario
-					sudo usermod -U "$usuario"
+					`sudo usermod -U $usuario`
 					echo "Usuario $usuario desbloqueado"
 			}
 
@@ -118,14 +118,14 @@ listabloqueado ()
 bloquearusuario () 
 			{
 				read -p "Ingrese el nombre del usuario para bloquear: " usuario
-					sudo usermod -L "$usuario"
+					`sudo usermod -L $usuario`
 					echo "Usuario $usuario bloqueado"
 			}
 
 			
 desbloquearusuario () {
 				read -p "Ingrese un usuario bloqueado: " $usuario
-					sudo usermod -U "$usuario"
+					`sudo usermod -U `$usuario`
 					echo "Usuario $usuario desbloqueado"
 			}
 
