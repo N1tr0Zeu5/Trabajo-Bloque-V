@@ -13,9 +13,9 @@
 
 - [Ejercicio 1](https://github.com/N1tr0Zeu5/Trabajo-Bloque-V/tree/Ejercicio_1)
 - [Ejercicio 2](https://github.com/N1tr0Zeu5/Trabajo-Bloque-V/tree/Ejercicio_2)
-- [Ejercicio 3](#contributing)
-- [Ejercicio 4](#license)
-- [Ejercicio 5]()
+- [Ejercicio 3](https://github.com/N1tr0Zeu5/Trabajo-Bloque-V/tree/Ejercicio_3)
+- [Ejercicio 4](https://github.com/N1tr0Zeu5/Trabajo-Bloque-V/tree/Ejercicio_4)
+- [Ejercicio 5](https://github.com/N1tr0Zeu5/Trabajo-Bloque-V/tree/Ejercicio_5)
 
 
 ## Bibliografia 
