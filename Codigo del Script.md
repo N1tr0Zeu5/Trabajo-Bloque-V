@@ -1,9 +1,9 @@
 ### Cabecera
 ````
 #!/bin/bash
-#Author: 
+#Author: Juanjo, Ruben, Jose Manuel
 #Version:
-#Descripcion: 
+#Descripcion: crea ususarios de forma masiva
 #Variables/Parametros:
 nombre=$1
 fecha=`date +%d-%m-%Y`
@@ -19,12 +19,11 @@ informeUsuario="usuarioscreados-$fecha.tmp"
 #BloquePrincipal:
 clear 
 
-  for i in $(seq 1 $2);
+  for i in $(seq 1 1 $2)
                   do
                           nombreUsuario="$nombre$i"
-                        
-                          sudo useradd -m -p $(echo -n "password" | openssl passwd -l -stidin) "nombreUsuario"
-                          sudo chage -d 0 $nombreUsuario
+                          sudo useradd -m -p $(echo -n "$password" | openssl passwd -1 -stidin) "nombreUsuario"
+                          sudo chage -d 0 "$nombreUsuario"
                           echo "$nombreUsuario:$nombreUsuario" >> $informeUsuario
                   done
 
