@@ -15,6 +15,7 @@ BloquearUsuario → Nos pregunta el nombre de un usuario y lo bloqueamos. <br>
 DesbloquearUsuario → Nos pregunta el nombre de un usuario y lo desbloqueamos. <br>
 CerrarSesion → Nos pregunta el nombre de un usuario, y si el usuario lleva más de 30 minutos (1800 seg) sin actividad, se le cierra la sesión.
 <br>
+<br>
 
 Este era el script que se nos solicitaba y a continuación explicaremos un poco paso a paso;
 ### 1- Usuario bloqueados
