@@ -30,8 +30,15 @@ En cuanto se tienen ambos archivos se comparan en una lista y la impreme mostran
 bloquearusuario () 
 			{
 				read -p "Ingrese el nombre del usuario para bloquear: " usuario
-					sudo usermod -L "$usuario"
+					`sudo usermod -L `$usuario`
 					echo "Usuario $usuario bloqueado"
 			}
 
-  Aqui primero preguntamos por el nombre del usuario que queramos bloquear y luego mediante el comando usermod -L bloqueamos dicho usuario.
+  Aqui primero preguntamos por el nombre del usuario que queramos bloquear y luego mediante el comando usermod -L bloqueamos dicho usuario y nos imprime por pantalla que el usuario seleccionado ha sido bloqueado.
+
+  desbloquearusuario ()
+  			{
+				read -p "Ingrese un usuario bloqueado: " $usuario
+					`sudo usermod -U `$usuario`
+					echo "Usuario $usuario desbloqueado"
+			}
