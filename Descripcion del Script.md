@@ -4,7 +4,8 @@
   /root/ApacheError.tmp por lo que para poder crearlo y modificar este archivo el script pedira ser root para la ejecucion. En caso de que el servicio este apagado, lo reiniciara.
 </p>
 
-#### Formato de fecha
-````
-dd-mm-YYYY-Hora:minutos
-````
+> [!TIP]
+> 
+> #### Formato de fecha:
+> dd-mm-YYYY-Hora:minutos
+
