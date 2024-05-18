@@ -55,3 +55,54 @@ bloquearusuario ()
 			}
 ````
    Como en el ejercicio anterior, primero preguntamos por un usuario bloqueado y lo desbloqueamos con el comando usermod -U y nos imprime por pantalla el usuario desbloqueado.
+
+
+cerrarSesion () {
+			read -p "Ingrese el nombre del usuario para cerrar su sesion: " usuario
+			if who | grep -q $usuario ; then
+				$tiempo
+				$tiempo_activo
+				$tiempo_inactivo
+				if [ $tiempo_inactivo -gt 1800 ]; then 
+					sudo pkill -KILL -u $usuario
+					echo "Sesion de $usuario cerrada por inactividad."
+				else 
+					echo "El usuario $usuario ha estado conectado recientemente."
+				fi 
+			else 
+				echo "El usuario $susuario no esta conectado."
+			fi
+		}
+
+
+  En esta funcion primero preguntamos el ususario, luego comprobamos si esta conectado, para luego calcular el tiempo de inactividad, mas tarde con un "if" verificamos si ese usuario ha sobrepaso el limite de inactividad y proceder a cerrar su sesion.
+  la funcion termina segun su tiempo inactivo te impreme por pantalla que el ususario ha estado conectado recientemente o por el contrario que su sesion ha sido cerrada.
+
+
+  menu () {
+		clear 
+		while true; do
+			echo "Menu Principal"
+			echo "1. Lista de Bloqueados"
+			echo "2. Bloquear Usuario"
+			echo "3. Desbloquear Usuario"
+			echo "4. Cerrar sesion usuario"
+			echo "5. Salir."
+			
+			read -p "Seleccione una opcion: " opcion 
+			
+			case $opcion in 
+				1) listabloqueado ;;
+				2) bloquearusuario ;;
+				3) desbloquearusuario ;;
+				4) cerrarSesion;;
+				5) clear
+				exit ;;
+				*) echo "Opcion incorrecta" 
+				menu 
+			esac
+		done
+	}
+
+ En esta funcion mediante un while true y un case hemos creado un bucle de un menu con las diferentes opciones donde cada opcion llama a una diferente funcion.
+   
