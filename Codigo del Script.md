@@ -9,8 +9,8 @@ nombre=$1
 fecha=`date +%d-%m-%Y`
 informeUsuario="usuarioscreados-$fecha.tmp"
 #Comentarios:
-````
 #Funciones
+````
 > [!NOTE]
 > Hemos elegido por no usar funciones, ya que al tratarse de parametros preferimos no tener que pasarselos a la funcion, para evitar fallos.
 
