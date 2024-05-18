@@ -57,7 +57,7 @@ bloquearusuario ()
 ````
    Como en el ejercicio anterior, primero preguntamos por un usuario bloqueado y lo desbloqueamos con el comando usermod -U y nos imprime por pantalla el usuario desbloqueado.
 
-
+````
 cerrarSesion () {
 			read -p "Ingrese el nombre del usuario para cerrar su sesion: " usuario
 			if who | grep -q $usuario ; then
@@ -75,11 +75,11 @@ cerrarSesion () {
 			fi
 		}
 
-
+````
   En esta funcion primero preguntamos el ususario, luego comprobamos si esta conectado, para luego calcular el tiempo de inactividad, mas tarde con un "if" verificamos si ese usuario ha sobrepaso el limite de inactividad y proceder a cerrar su sesion.
   la funcion termina segun su tiempo inactivo te impreme por pantalla que el ususario ha estado conectado recientemente o por el contrario que su sesion ha sido cerrada.
 
-
+````
   menu () {
 		clear 
 		while true; do
@@ -106,5 +106,6 @@ cerrarSesion () {
 	}
 
  En esta funcion mediante un while true y un case hemos creado un bucle de un menu con las diferentes opciones donde cada opcion llama a una diferente funcion.
+````
 > [!CAUTION]
 >Modifica esto.
