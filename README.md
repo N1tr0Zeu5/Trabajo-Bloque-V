@@ -28,4 +28,13 @@ comprobarRoot()
 - Comprobamos que el usuario que ejecuta el sript es el root del sistema
 > [!NOTE]
 > Para que el script se ejecute todos los dias a las 6 debemos introducir en el crontab -e:
-> > */ 6 * * * /rutadelscript
+> <br>
+> <br>
+> 0 6 * * * /rutadelscript
+> <br>
+> <br>
+> Para que cuando se inicie el sistema el script se inicie a los 5 minutos, en el crontab -e:
+> <br>
+> <br>
+> @reboot sleep 300 && /rutadelscript
+> <br>
