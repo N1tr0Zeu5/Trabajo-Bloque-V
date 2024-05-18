@@ -42,3 +42,5 @@ bloquearusuario ()
 					`sudo usermod -U `$usuario`
 					echo "Usuario $usuario desbloqueado"
 			}
+
+   Como en el ejercicio anterior, primero preguntamos por un usuario bloqueado y lo desbloqueamos con el comando usermod -U y nos imprime por pantalla el usuario desbloqueado.
