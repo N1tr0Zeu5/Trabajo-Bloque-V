@@ -8,7 +8,6 @@
 ### 1. Descripción del Script
 ### 2. Codigo del Script
 ### 3. Ejecucion del Script
-### 4. Observaciones
 
 ## Contenido 
 
