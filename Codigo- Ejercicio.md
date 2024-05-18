@@ -142,7 +142,7 @@ cerrarSesion () {
 					echo "El usuario $usuario ha estado conectado recientemente."
 				fi 
 			else 
-				echo "El usuario $susuario no esta conectado."
+				echo "El usuario $usuario no esta conectado."
 			fi
 		}
 
