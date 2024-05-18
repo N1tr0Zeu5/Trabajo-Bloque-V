@@ -12,6 +12,20 @@ En este caso el script debera añadir a un informe la fecha actual indicando que
 >> dd-mm-YYYY-Hora:minutos
  <br>
 
+### Comprobar el root 
+
+````
+comprobarRoot()
+{
+    if [ "$(id -u)" != "0" ]
+        then   
+            echo " Este script solo puede ser ejecutado por el Root"
+            exit
+    fi
+}
+
+````
+- Comprobamos que el usuario que ejecuta el sript es el root del sistema
 > [!NOTE]
 > Para que el script se ejecute todos los dias a las 6 debemos introducir en el crontab -e:
 > > */ 6 * * * /rutadelscript
