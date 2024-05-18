@@ -8,11 +8,13 @@ Realiza un script llamado usuariosBloqueados.sh, que nos muestre un menú:
 - 4-- Cerrar sesión usuario
 - 5- Salir
  <br>
-Cada opción del menú corresponde con una función. <br>
+Cada opción del menú corresponde con una función.
+<br>
 UsuariosBloqueados → nos muestra en pantalla los usuarios (uid>1000 y <2000) que tengan la cuenta bloqueada. <br>
 BloquearUsuario → Nos pregunta el nombre de un usuario y lo bloqueamos. <br>
 DesbloquearUsuario → Nos pregunta el nombre de un usuario y lo desbloqueamos. <br>
-CerrarSesion → Nos pregunta el nombre de un usuario, y si el usuario lleva más de 30 minutos (1800 seg) sin actividad, se le cierra la sesión. <br>
+CerrarSesion → Nos pregunta el nombre de un usuario, y si el usuario lleva más de 30 minutos (1800 seg) sin actividad, se le cierra la sesión.
+ <br>
 
 Este era el script que se nos solicitaba y a continuación explicaremos un poco paso a paso;
 ### 1- Usuario bloqueados
