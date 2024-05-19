@@ -1,4 +1,4 @@
-
+# Descripción del Script
 ### Ejercicio 2
 
 Realiza un script llamado usuariosBloqueados.sh, que nos muestre un menú:
