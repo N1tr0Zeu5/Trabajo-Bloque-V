@@ -17,12 +17,12 @@ informeUsuario="usuarioscreados-$fecha.tmp"
 ### Bloque Principal 
 ````
 #BloquePrincipal:
-clear 
 
-  for i in $(seq 1 1 $2)
+
+  for i in $(seq 1 1 $2);
                   do
                           nombreUsuario="$nombre$i"
-                          sudo useradd -m -p $(echo -n "$nombreUsuario" | openssl passwd -1 -stidin) "$nombreUsuario"
+                          sudo useradd -m -p $(echo -n "$nombreUsuario" | openssl passwd -1 -stdin) "$nombreUsuario" > /dev/null 2>&1
                           sudo chage -d 0 "$nombreUsuario"
                           echo "$nombreUsuario:$nombreUsuario" >> $informeUsuario
                   done
@@ -44,12 +44,12 @@ informeUsuario="usuarioscreados-$fecha.tmp"
 #Comentarios:
 #Funciones
 #BloquePrincipal:
-clear 
+
 
   for i in $(seq 1 1 $2);
                   do
                           nombreUsuario="$nombre$i"
-                          sudo useradd -m -p $(echo -n "$nombreUsuario" | openssl passwd -1 -stidin) "nombreUsuario"
+                          sudo useradd -m -p $(echo -n "$nombreUsuario" | openssl passwd -1 -stdin) "$nombreUsuario" > /dev/null 2>&1
                           sudo chage -d 0 "$nombreUsuario"
                           echo "$nombreUsuario:$nombreUsuario" >> $informeUsuario
                   done
