@@ -60,11 +60,11 @@ comprobarRoot()
 #BloquePrincipal
 clear
 comprobarRoot
-echo "$status" >> $informe
+echo "$status" > $informe
 cat $informe | grep -w "running" > /dev/null
     if [ $? -eq 0 ];
         then echo "El servicio esta activo"
-        else echo "Error apache: $fecha" > /root/ApacheError.tmp
+        else echo "Error apache: $fecha" >> /root/ApacheError.tmp
             echo "$reinicio"
             echo " El servicio ha sido reiniciado"
     fi
