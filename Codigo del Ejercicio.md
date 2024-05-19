@@ -1,7 +1,7 @@
 ## Cabecera: 
 ```
 #!/bin/bash
-#Author:  Juan Jose Campos Gomez, Jose Manuel Lamprea, Ruben Ramirez Garcia
+#Author:  Juan Jose Campos Gomez, Jose Manuel Lamprea Demski, Ruben Ramirez Garcia
 #Version: 1.0 
 #Descripcion: Scrip que imprime un menu y ofrece las siguientes opciones. (1) Una lista de los usuarios bloqueados en el sistema (2) La posibilidad de bloquear un usuario (3) La posibilidad de desbloquear un usuario (4) Cerrar la sesion de un usuario (5)Salir del script
 #Parámetros/Variables:
@@ -94,7 +94,7 @@ menu
 ### Script completo
 ````
 #!/bin/bash
-#Author:  Juan Jose Campos Gomez, Jose Manuel Lamprea, Ruben Ramirez Garcia
+#Author:  Juan Jose Campos Gomez, Jose Manuel Lamprea Demski, Ruben Ramirez Garcia
 #Version: 1.0 
 #Descripcion: Scrip que imprime un menu y ofrece las siguientes opciones. (1) Una lista de los usuarios bloqueados en el sistema (2) La posibilidad de bloquear un usuario (3) La posibilidad de desbloquear un usuario (4) Cerrar la sesion de un usuario (5)Salir del script
 #Parámetros/Variables:
