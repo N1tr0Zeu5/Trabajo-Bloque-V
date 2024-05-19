@@ -9,7 +9,7 @@
 ### Funciones:
 ````
 # Funciones
-# Función para mostrar el menú
+
 menu ()
 {
    while true;
