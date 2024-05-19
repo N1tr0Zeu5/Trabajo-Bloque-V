@@ -1,3 +1,4 @@
+# Descripción del Script
 ### Ejercicio 3
 - Buscamos la creacion de un menu que nos permita realizar creacion masiva de usuarios y la eliminacion de estos. La informacion respectiva de los usuarios se almacena en un archivo .csv.
 
