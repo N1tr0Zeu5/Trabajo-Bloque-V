@@ -34,7 +34,7 @@ bloquearusuario ()
 
 			
 desbloquearusuario () {
-				read -p "Ingrese un usuario bloqueado: " $usuario
+				read -p "Ingrese un usuario bloqueado: " usuario
 					`sudo usermod -U $usuario`
 					echo "Usuario $usuario desbloqueado"
 			}
