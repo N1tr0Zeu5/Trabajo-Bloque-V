@@ -37,7 +37,7 @@
 
 
 Realizado por Juan Jose Campos Gomez, Jose Manuel Lamprea Demski y Ruben Ramirez Garcia
-Así nos hemos quedado despues del trabajo:
+<br>Así nos hemos quedado despues del trabajo:<br>
 
 
 ````
