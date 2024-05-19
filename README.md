@@ -18,29 +18,29 @@ Ademas se ha establecido que la fecha de expiracion de las cuentas sea el 30-06-
 ````
 menu ()
 {
-   while true;
-   do
-   	echo "************************************"
-	echo "Menú: "
-	echo "************************************"
-	echo "1.- Crear Usuarios"
-	echo "2.- Borrar Usuarios"
-	echo "3.- Salir"
-	read -p "Pulse un número: " numero
+	while true;
+		do
+		   	echo "************************************"
+			echo "Menú: "
+			echo "************************************"
+			echo "1.- Crear Usuarios"
+			echo "2.- Borrar Usuarios"
+			echo "3.- Salir"
+			read -p "Pulse un número: " numero
 	
-	case $numero in
-		1)
-			crearUsuarios ;;
-		2)
-			borrarUsuarios ;;
-		3)
-			clear
-			exit ;;
-		*)
-			echo "Error. Por favor, seleccione una opción válida"
-			;;
-	esac
-   done
+				case $numero in
+					1)
+						crearUsuarios ;;
+					2)
+						borrarUsuarios ;;
+					3)
+						clear
+						exit ;;
+					*)
+						echo "Error. Por favor, seleccione una opción válida"
+						;;
+				esac
+  		 done
 }
 ````
 Funcion que imprime el menu y tiene todas las funciones que se ejecutan en el script
