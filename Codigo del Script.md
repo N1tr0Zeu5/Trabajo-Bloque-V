@@ -57,3 +57,11 @@ clear
 echo "Usuarios creados y contraseñas: "
 cat $informeUsuario
 ````
+
+> [!CAUTION]
+>en este script nos encontramos con varios problemas pese a ser un codigo simple sin funciones, a la hora de conseguir que el nombre funcionase tambien como contraseña teniamos
+> problemas ya que durante la creacion del script no leia la letra "ñ" y charlando con varios compañeros de otros grupos, todos llegamos a la misma conclusion despues de un tiempo
+
+
+
+
