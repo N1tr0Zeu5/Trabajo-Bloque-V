@@ -1,7 +1,7 @@
 # Descripción del Script
 ### Ejercicio 2
 
-Realiza un script llamado usuariosBloqueados.sh, que nos muestre un menú:
+Buscamos un script que nos muestre un menú:
 - 1- Usuarios Bloqueados.
 - 2- Bloquear un usuario.
 - 3- Desbloquear usuario.
