@@ -51,7 +51,7 @@ reinicio=$(systemctl restart apache2)
 #Funciones
 comprobarRoot()
 {
-    if [ "$(id -u)" != "0" ]
+    if [ "$(id -u)" != "0" ];
         then   
             echo " Este script solo puede ser ejecutado por el Root"
             exit
