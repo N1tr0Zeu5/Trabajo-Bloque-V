@@ -13,11 +13,11 @@
 
 listabloqueado () 
 			{
-				echo "Usuarios bloqueados: "
+				echo "Usuarios bloqueados: $tiempo_inactivo"
 					awk -F: '$3 >= 1000 && $3 < 2000 {print $1}' /etc/passwd > informe.txt
 					sudo passwd -S -a | grep " L " | cut -d " " -f1 > bloqueo.txt
 				lista=$(grep -f informe.txt bloqueo.txt)
-				echo $lista
+					echo $lista
 				
 				
 			}
@@ -46,11 +46,11 @@ cerrarSesion () {
 									`sudo pkill -KILL -u $usuario`
 									echo "Sesion de $usuario cerrada por inactividad."
 								else 
-									echo "El usuario $usuario ha estado conectado recientemente. $tiempo_inactivo"
-				fi 
+									echo "El usuario $usuario ha estado conectado recientemente. "
+							fi 
 					else 
 						echo "El usuario $usuario no esta conectado."
-			fi
+				fi
 		}
 
 
