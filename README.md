@@ -40,7 +40,7 @@ En cuanto se tienen ambos archivos se comparan en una lista y la impreme mostran
 bloquearusuario () 
 			{
 				read -p "Ingrese el nombre del usuario para bloquear: " usuario
-					`sudo usermod -L usuario`
+					`sudo usermod -L $usuario`
 					echo "Usuario $usuario bloqueado"
 			}
 ````
@@ -51,7 +51,7 @@ bloquearusuario ()
  desbloquearusuario ()
   			{
 				read -p "Ingrese un usuario bloqueado: " usuario
-					`sudo usermod -U usuario`
+					`sudo usermod -U $usuario`
 					echo "Usuario $usuario desbloqueado"
 			}
 ````
