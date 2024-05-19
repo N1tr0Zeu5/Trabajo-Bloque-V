@@ -1,3 +1,5 @@
+# Descripción del Script
+
 ### Ejercicio 1
 
 Con este script comprobaremos el estado de un servicio, en este caso el apache2. Nos interesa saber si este esta activo (running) o inactivo (death).
