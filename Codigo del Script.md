@@ -1,7 +1,7 @@
 ### Cabecera
 ````
 #!/bin/bash
-#Author: Juanjo, Ruben, Jose Manuel
+#Author: Juan Jose Campos Gomez, Jose Manuel Lamprea Demski, Rubén Ramírez García
 #Version:
 #Descripcion: crea ususarios de forma masiva
 #Variables/Parametros:
@@ -31,14 +31,13 @@ cat $informeUsuario
 ### Script Completo
 ````
 #!/bin/bash
-#Author: 
-#Version:
-#Descripcion: 
-#Variables/Parametros:
+#Author: Juan Jose Campos Gomez, Jose Manuel Lamprea Demski, Rubén Ramírez García
+#Version: 1.0
+#Descripcion: Crea ususarios de forma masiva
+#Variables/Parametros: 
 nombre=$1
 fecha=`date +%d-%m-%Y`
 informeUsuario="usuarioscreados-$fecha.tmp"
-
 #Comentarios:
 #Funciones
 #BloquePrincipal:
