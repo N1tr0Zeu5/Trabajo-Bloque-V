@@ -98,15 +98,12 @@ menu
 #Version: 1.0 
 #Descripcion: Scrip que imprime un menu y ofrece las siguientes opciones. (1) Una lista de los usuarios bloqueados en el sistema (2) La posibilidad de bloquear un usuario (3) La posibilidad de desbloquear un usuario (4) Cerrar la sesion de un usuario (5)Salir del script
 #Parámetros/Variables:
-		tiempo=$(date -d "$(who | grep $usuario | awk '{print $4}')" +%s)
-		tiempo_activo=$(date +%s)
-		tiempo_inactivo=$((tiempo_activo - tiempo ))
 #Comentarios:
 #Funciones
 
 listabloqueado () 
 			{
-				echo "Usuarios bloqueados: "
+				echo "Usuarios bloqueados: $tiempo_inactivo"
 				awk -F: '$3 >= 1000 && $3 < 2000 {print $1}' /etc/passwd > informe.txt
 				sudo passwd -S -a | grep " L " | cut -d " " -f1 > bloqueo.txt
 				lista=$(grep -f informe.txt bloqueo.txt)
@@ -131,15 +128,15 @@ desbloquearusuario () {
 
 cerrarSesion () {
 			read -p "Ingrese el nombre del usuario para cerrar su sesion: " usuario
-			if who | grep -q $usuario ; then
-				$tiempo
-				$tiempo_activo
-				$tiempo_inactivo
-				if [ $tiempo_inactivo -gt 1800 ]; then 
-					sudo pkill -KILL -u $usuario
+			if who | grep -q $usuario 
+			then
+	tiempo_inactivo=$(who -u | grep $usuario | awk '{print $5}')
+				if [ $tiempo_inactivo > 1800 ] > /dev/null 2>&1
+				then 
+					`sudo pkill -KILL -u $usuario`
 					echo "Sesion de $usuario cerrada por inactividad."
 				else 
-					echo "El usuario $usuario ha estado conectado recientemente."
+					echo "El usuario $usuario ha estado conectado recientemente. $tiempo_inactivo"
 				fi 
 			else 
 				echo "El usuario $usuario no esta conectado."
