@@ -24,9 +24,9 @@ Este era el script que se nos solicitaba y a continuación explicaremos un poco 
 listabloqueado () 
 			{
 				echo "Usuarios bloqueados: "
-				awk -F: '$3 >= 1000 && $3 < 2000 {print $1}' /etc/passwd > /home/josemanuel/boletinscript1/informe.txt
-				sudo passwd -S -a | grep " L " | cut -d " " -f1 > /home/josemanuel/boletinscript1/bloqueo.txt
-				lista=$(grep -f /home/josemanuel/boletinscript1/informe.txt /home/josemanuel/boletinscript1/bloqueo.txt)
+				awk -F: '$3 >= 1000 && $3 < 2000 {print $1}' /etc/passwd > informe.txt
+				sudo passwd -S -a | grep " L " | cut -d " " -f1 > bloqueo.txt
+				lista=$(grep -f informe.txt bloqueo.txt)
 				echo $lista
 			}
 ````
@@ -40,7 +40,7 @@ En cuanto se tienen ambos archivos se comparan en una lista y la impreme mostran
 bloquearusuario () 
 			{
 				read -p "Ingrese el nombre del usuario para bloquear: " usuario
-					`sudo usermod -L `$usuario`
+					`sudo usermod -L usuario`
 					echo "Usuario $usuario bloqueado"
 			}
 ````
@@ -51,7 +51,7 @@ bloquearusuario ()
  desbloquearusuario ()
   			{
 				read -p "Ingrese un usuario bloqueado: " $usuario
-					`sudo usermod -U `$usuario`
+					`sudo usermod -U usuario`
 					echo "Usuario $usuario desbloqueado"
 			}
 ````
