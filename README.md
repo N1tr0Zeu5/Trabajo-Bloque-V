@@ -23,12 +23,11 @@ Este era el script que se nos solicitaba y a continuación explicaremos un poco 
 ````
 listabloqueado () 
 			{
-				echo "Usuarios bloqueados: "
-				awk -F: '$3 >= 1000 && $3 < 2000 {print $1}' /etc/passwd > informe.txt
-				sudo passwd -S -a | grep " L " | cut -d " " -f1 > bloqueo.txt
+				echo "Usuarios bloqueados: $tiempo_inactivo"
+					awk -F: '$3 >= 1000 && $3 < 2000 {print $1}' /etc/passwd > informe.txt
+					sudo passwd -S -a | grep " L " | cut -d " " -f1 > bloqueo.txt
 				lista=$(grep -f informe.txt bloqueo.txt)
-				echo $lista
-			}
+					echo $lista
 ````
 
 En esta función nos crea dos tipos de archivos, en uno de ellos los usuarios ccon su UID comprendidos entre 1000 y 2000  y lo redirige a una informe.txt
@@ -48,32 +47,34 @@ bloquearusuario ()
 <br>
 ### 3- Desbloquear un usuario
 ````
- desbloquearusuario ()
-  			{
+			
+desbloquearusuario () {
 				read -p "Ingrese un usuario bloqueado: " usuario
 					`sudo usermod -U $usuario`
 					echo "Usuario $usuario desbloqueado"
 			}
+
 ````
    Como en el ejercicio anterior, primero preguntamos por un usuario bloqueado y lo desbloqueamos con el comando usermod -U y nos imprime por pantalla el usuario desbloqueado.
 
 ````
 cerrarSesion () {
 			read -p "Ingrese el nombre del usuario para cerrar su sesion: " usuario
-			if who | grep -q $usuario ; then
-				$tiempo
-				$tiempo_activo
-				$tiempo_inactivo
-				if [ $tiempo_inactivo -gt 1800 ]; then 
-					sudo pkill -KILL -u $usuario
-					echo "Sesion de $usuario cerrada por inactividad."
-				else 
-					echo "El usuario $usuario ha estado conectado recientemente."
-				fi 
-			else 
-				echo "El usuario $susuario no esta conectado."
-			fi
+				if who | grep -q $usuario 
+					then
+						tiempo_inactivo=$(who -u | grep $usuario | awk '{print $5}')
+							if [ $tiempo_inactivo > 1800 ] > /dev/null 2>&1
+								then 
+									`sudo pkill -KILL -u $usuario`
+									echo "Sesion de $usuario cerrada por inactividad."
+								else 
+									echo "El usuario $usuario ha estado conectado recientemente. "
+							fi 
+					else 
+						echo "El usuario $usuario no esta conectado."
+				fi
 		}
+
 
 ````
   En esta funcion primero preguntamos el ususario, luego comprobamos si esta conectado, para luego calcular el tiempo de inactividad, mas tarde con un "if" verificamos si ese usuario ha sobrepaso el limite de inactividad y proceder a cerrar su sesion.
