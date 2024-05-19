@@ -90,7 +90,7 @@ menu
 # Descripción: Programa bienvenida
 # Parámetros/Variables
 # Funciones
-# Función para mostrar el menú
+
 menu ()
 {
    while true;
