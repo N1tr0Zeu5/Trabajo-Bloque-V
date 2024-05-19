@@ -104,8 +104,8 @@ menu
 listabloqueado () 
 			{
 				echo "Usuarios bloqueados: $tiempo_inactivo"
-				awk -F: '$3 >= 1000 && $3 < 2000 {print $1}' /etc/passwd > informe.txt
-				sudo passwd -S -a | grep " L " | cut -d " " -f1 > bloqueo.txt
+					awk -F: '$3 >= 1000 && $3 < 2000 {print $1}' /etc/passwd > informe.txt
+					sudo passwd -S -a | grep " L " | cut -d " " -f1 > bloqueo.txt
 				lista=$(grep -f informe.txt bloqueo.txt)
 				echo $lista
 				
@@ -128,19 +128,19 @@ desbloquearusuario () {
 
 cerrarSesion () {
 			read -p "Ingrese el nombre del usuario para cerrar su sesion: " usuario
-			if who | grep -q $usuario 
-			then
-	tiempo_inactivo=$(who -u | grep $usuario | awk '{print $5}')
-				if [ $tiempo_inactivo > 1800 ] > /dev/null 2>&1
-				then 
-					`sudo pkill -KILL -u $usuario`
-					echo "Sesion de $usuario cerrada por inactividad."
-				else 
-					echo "El usuario $usuario ha estado conectado recientemente. "
-				fi 
-			else 
-				echo "El usuario $usuario no esta conectado."
-			fi
+				if who | grep -q $usuario 
+					then
+						tiempo_inactivo=$(who -u | grep $usuario | awk '{print $5}')
+							if [ $tiempo_inactivo > 1800 ] > /dev/null 2>&1
+								then 
+									`sudo pkill -KILL -u $usuario`
+									echo "Sesion de $usuario cerrada por inactividad."
+								else 
+									echo "El usuario $usuario ha estado conectado recientemente. "
+							fi 
+					else 
+						echo "El usuario $usuario no esta conectado."
+				fi
 		}
 
 
