@@ -22,7 +22,7 @@ clear
   for i in $(seq 1 1 $2)
                   do
                           nombreUsuario="$nombre$i"
-                          sudo useradd -m -p $(echo -n "$password" | openssl passwd -1 -stidin) "nombreUsuario"
+                          sudo useradd -m -p $(echo -n "$nombreUsuario" | openssl passwd -1 -stidin) "nombreUsuario"
                           sudo chage -d 0 "$nombreUsuario"
                           echo "$nombreUsuario:$nombreUsuario" >> $informeUsuario
                   done
